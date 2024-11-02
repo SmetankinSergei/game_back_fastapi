@@ -1,8 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Float
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+from layers.models import Base
 
 
 class Hero(Base):
@@ -32,8 +31,9 @@ class InventoryItem(Base):
     __tablename__ = 'inventory_items'
 
     id = Column(Integer, primary_key=True, index=True)
+    item_id = Column(Integer, ForeignKey('items.id'))
     hero_id = Column(Integer, ForeignKey('heroes.id'))
-    item_name = Column(String, index=True)
     quantity = Column(Integer, default=1)
 
     hero = relationship('Hero', back_populates='inventory_items')
+    item = relationship('Item')
