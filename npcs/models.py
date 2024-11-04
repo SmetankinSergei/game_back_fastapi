@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 
 from database import Base
 
@@ -43,3 +44,6 @@ class NPC(Base):
     def check_research(self, trick_difficulty: int) -> bool:
         """Проверка способности NPC раскрыть хитрость героя."""
         return self.research >= trick_difficulty
+
+    def use_special_skill(self):
+        pass
