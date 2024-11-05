@@ -23,7 +23,7 @@ class BaseSpell(Base):
     cooldown = Column(Float, default=5.0)  # время отката в секундах
     is_area_effect = Column(Boolean, default=False)  # массовое заклинание или нет
 
-    def __call__(self, caster, target):
+    def __call__(self, caster, target):  # заменить caster?
         """Метод для применения заклинания."""
         if not self._can_cast(caster):
             print(f"{caster.name} не может использовать {self.name}. Недостаточно маны.")
