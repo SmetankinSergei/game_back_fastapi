@@ -26,6 +26,7 @@ class Hero(Base):
     user_id = Column(Integer, ForeignKey('users_user.id'))
     inventory_items = relationship('InventoryItem', back_populates='hero')
     # armor not in inventory?
+    # counters: trains, ...
     # effects list
     # speed
 
