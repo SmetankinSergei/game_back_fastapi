@@ -38,6 +38,7 @@ class InventoryItem(Base):
     item_id = Column(Integer, ForeignKey('items.id'))
     hero_id = Column(Integer, ForeignKey('heroes.id'))
     quantity = Column(Integer, default=1)
+    # items list
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
