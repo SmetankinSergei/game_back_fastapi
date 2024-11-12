@@ -40,6 +40,7 @@ class InventoryItem(Base):
     quantity = Column(Integer, default=1)
     # items list
     # effects for inventory?
+    # порча предметов
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
