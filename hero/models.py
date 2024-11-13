@@ -41,6 +41,7 @@ class InventoryItem(Base):
     # items list
     # effects for inventory?
     # порча предметов
+    # повреждение самого инвенторя
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
