@@ -42,6 +42,7 @@ class InventoryItem(Base):
     # effects for inventory?
     # порча предметов
     # повреждение самого инвенторя
+    # прокачка инвенторя - уровень
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
