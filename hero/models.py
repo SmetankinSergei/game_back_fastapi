@@ -43,6 +43,7 @@ class InventoryItem(Base):
     # порча предметов
     # повреждение самого инвенторя
     # прокачка инвенторя - уровень
+    # объединение объектов
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
