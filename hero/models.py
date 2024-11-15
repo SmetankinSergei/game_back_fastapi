@@ -44,6 +44,7 @@ class InventoryItem(Base):
     # повреждение самого инвенторя
     # прокачка инвенторя - уровень
     # объединение объектов
+    # варианты доступа?
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
