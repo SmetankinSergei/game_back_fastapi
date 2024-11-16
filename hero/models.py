@@ -45,6 +45,7 @@ class InventoryItem(Base):
     # прокачка инвенторя - уровень
     # объединение объектов
     # варианты доступа?
+    # несколько у одного игрока?
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
