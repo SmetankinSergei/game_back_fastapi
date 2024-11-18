@@ -46,6 +46,7 @@ class InventoryItem(Base):
     # объединение объектов
     # варианты доступа?
     # несколько у одного игрока?
+    # быстрый доступ
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
