@@ -50,6 +50,7 @@ class InventoryItem(Base):
     # отсутствие доступа при определённых условиях
     # разбор на детали
     # сравнение
+    # оценка стоимости деталей после разборки
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
