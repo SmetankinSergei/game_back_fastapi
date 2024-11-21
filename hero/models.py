@@ -49,6 +49,7 @@ class InventoryItem(Base):
     # быстрый доступ
     # отсутствие доступа при определённых условиях
     # разбор на детали
+    # сравнение
 
     hero = relationship('Hero', back_populates='inventory_items')
     item = relationship('Item')
