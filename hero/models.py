@@ -54,6 +54,7 @@ class InventoryItem(Base):
     # оценка стоимости деталей после разборки
     # продажа хлама
     # группы похожих
+    # history
     # base manager class
 
     hero = relationship('Hero', back_populates='inventory_items')
