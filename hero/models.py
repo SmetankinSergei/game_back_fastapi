@@ -56,6 +56,7 @@ class InventoryItem(Base):
     # группы похожих
     # history
     # pictures
+    # unique check
     # base manager class
 
     hero = relationship('Hero', back_populates='inventory_items')
