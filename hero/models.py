@@ -57,6 +57,7 @@ class InventoryItem(Base):
     # history
     # pictures
     # unique check
+    # save in other bag
     # base manager class
 
     hero = relationship('Hero', back_populates='inventory_items')
