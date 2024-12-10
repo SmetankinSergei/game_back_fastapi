@@ -65,7 +65,7 @@ class InventoryItem(Base):
     # настройка веса
     # настройка места
     # настройка уровня
-    # сравнение инвентарей
+    # сравнение инвентрей
     # base manager class
 
     hero = relationship('Hero', back_populates='inventory_items')
